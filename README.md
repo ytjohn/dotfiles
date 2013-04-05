@@ -2,6 +2,11 @@
 
 My OS X / Ubuntu dotfiles.
 
+## Source:
+
+I just forked this from https://github.com/cowboy/dotfiles/ and added my local customizations. Don't
+install mine (unless you're just a big fan of my minor changes), go to the soruce.
+
 ## Why is this a git repo?
 
 I've been using bash on-and-off for a long time (since Slackware Linux was distributed on 1.44MB floppy disks). In all that time, every time I've set up a new Linux or OS X machine, I've copied over my `.bashrc` file and my `~/bin` folder to each machine manually. And I've never done a very good job of actually maintaining these files. It's been a total mess.
@@ -10,8 +15,8 @@ I finally decided that I wanted to be able to execute a single command to "boots
 
 That command is [~/bin/dotfiles][dotfiles], and this is my "dotfiles" Git repo.
 
-[dotfiles]: https://github.com/cowboy/dotfiles/blob/master/bin/dotfiles
-[bin]: https://github.com/cowboy/dotfiles/tree/master/bin
+[dotfiles]: https://github.com/ytjohn/dotfiles/blob/master/bin/dotfiles
+[bin]: https://github.com/ytjohn/dotfiles/tree/master/bin
 
 ## What, exactly, does the "dotfiles" command do?
 
@@ -39,7 +44,7 @@ Notes:
 * You need to have installed [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a separate, optional (and _much smaller_) download from XCode.
 
 ```sh
-bash -c "$(curl -fsSL https://raw.github.com/cowboy/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.github.com/ytjohn/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ### Ubuntu
@@ -50,7 +55,7 @@ Notes:
 
 ```sh
 sudo apt-get -qq update && sudo apt-get -qq upgrade && sudo apt-get -qq install curl && echo &&
-bash -c "$(curl -fsSL https://raw.github.com/cowboy/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://raw.github.com/ytjohn/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
 
 ## The "init" step
@@ -95,23 +100,23 @@ These things will be installed, but _only_ if they aren't already.
   * interactive_editor
 
 ## The ~/ "copy" step
-Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](https://github.com/cowboy/dotfiles/blob/master/copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
+Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](https://github.com/ytjohn/dotfiles/blob/master/copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
 
 ## The ~/ "link" step
 Any file in the `link` subdirectory gets symbolically linked with `ln -s` into `~/`. Edit these, and you change the file in the repo. Don't link files containing sensitive data, or you might accidentally commit that data!
 
 ## Aliases and Functions
-To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/cowboy/dotfiles/tree/master/source). I even have a [fancy prompt](https://github.com/cowboy/dotfiles/blob/master/source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
+To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/ytjohn/dotfiles/tree/master/source). I even have a [fancy prompt](https://github.com/ytjohn/dotfiles/blob/master/source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
 
 ## Scripts
-In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bash scripts][bin]. This includes [ack](https://github.com/petdance/ack), which is a [git submodule](https://github.com/cowboy/dotfiles/tree/master/libs).
+In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bash scripts][bin]. This includes [ack](https://github.com/petdance/ack), which is a [git submodule](https://github.com/ytjohn/dotfiles/tree/master/libs).
 
 * [dotfiles][dotfiles] - (re)initialize dotfiles. It might ask for your password (for `sudo`).
-* [src](https://github.com/cowboy/dotfiles/blob/master/link/.bashrc#L6-15) - (re)source all files in `source` directory
+* [src](https://github.com/ytjohn/dotfiles/blob/master/link/.bashrc#L6-15) - (re)source all files in `source` directory
 * Look through the [bin][bin] subdirectory for a few more.
 
 ## Prompt
-I think [my bash prompt](https://github.com/cowboy/dotfiles/blob/master/source/50_prompt.sh) is awesome. It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
+I think [my bash prompt](https://github.com/ytjohn/dotfiles/blob/master/source/50_prompt.sh) is awesome. It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
 
 Git repos display as **[branch:flags]** where flags are:
 
