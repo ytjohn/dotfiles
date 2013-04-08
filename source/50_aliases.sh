@@ -1,0 +1,5 @@
+alias ssh7='ssh -p 7678'
+alias scp7='scp -P 7678'
+alias gologin='ssh -p 7678 jth21@login.outreach.psu.edu -t ./bin/tmuxgo'
+alias gofdesk='ssh ytjohn@office.yourtech.us -t ./bin/tmuxgo'
+alias gomilo='ssh -p 7678 jth21@146.186.207.86 -t ./bin/tmuxgo'
