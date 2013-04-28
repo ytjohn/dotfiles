@@ -5,5 +5,7 @@ link/.ssh/id_rsa
 link/.ssh/ytl_rsa
 link/.ssh/known_hosts
 *.un~
-*LOCAL*
 link/.vim/.netrwhist
+link/.vim/undo
+link/.vim/tmp
+*LOCAL*

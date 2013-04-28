@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/jth21/devel/pelican.ytnoc.net/content'
-let g:netrw_dirhist_2='/Users/jth21/devel/pelican.ytnoc.net'
-let g:netrw_dirhist_3='/Users/jth21/devel/pelican.ytnoc.net/.git'
-let g:netrw_dirhist_4='/Users/jth21/devel/pelican_work/content'
-let g:netrw_dirhist_5='/Users/jth21/.vim'
-let g:netrw_dirhist_6='/Users/jth21/Dropbox/Public/ytwebsite/content'
