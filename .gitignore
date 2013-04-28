@@ -8,4 +8,5 @@ link/.ssh/known_hosts
 link/.vim/.netrwhist
 link/.vim/undo
 link/.vim/tmp
+link/.vim/viminfo
 *LOCAL*
