@@ -6,3 +6,4 @@ link/.ssh/ytl_rsa
 link/.ssh/known_hosts
 *.un~
 *LOCAL*
+link/.vim/.netrwhist
